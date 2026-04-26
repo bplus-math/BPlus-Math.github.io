@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" href="/images/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play [!] COMMENTS | GN-Math Unblocked Games</title>
+    <title>Play [!] Sounboard | B+ Math Unblocked Games</title>
     <meta name="description" content="Play [!] COMMENTS unblocked on GN-Math - No downloads required! Enjoy this fun HTML5 game at school or work with our fast, secure gaming platform.">
     <meta name="keywords" content="[!] COMMENTS, [!] COMMENTS unblocked, play [!] COMMENTS, free [!] COMMENTS, html5 games, unblocked games, school games, no flash games">
     
@@ -171,7 +171,7 @@
 
     <main class="game-container">
         <div class="game-header">
-            <h1 class="game-title">[!] COMMENTS</h1>
+            <h1 class="game-title">SoundBoard</h1>
         </div>
         
         <div class="game-frame-container">
@@ -190,8 +190,8 @@
             <div class="game-details">
                 <h2>About [!] COMMENTS</h2>
                 <p class="game-description">
-                    Play [!] COMMENTS unblocked on GN-Math! Our platform provides fast, secure access to this popular HTML5 game without any downloads. 
-                    Perfect for school, work, or home, [!] COMMENTS runs directly in your browser with no installation required.
+                    Play [!] Soundboard unblocked on B+ Math! Our platform provides fast, secure access to this popular HTML5 game without any downloads. 
+                    Perfect for school, work, or home, [!] Soundboard runs directly in your browser with no installation required.
                 </p>
                 
                 <h3>How to Play</h3>
@@ -218,7 +218,7 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const title = "[!] COMMENTS";
+        const title = "SoundBoard";
         const cover = "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/596-uu.png";
         const url = "/iframe/596-fixx.html";
 
