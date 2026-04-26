@@ -30,6 +30,189 @@
         gtag('js', new Date());
         gtag('config', 'G-WX5VS54ZDW');
     </script>
+<style>
+/* =========================
+   B+-Math UI (Bubble Comic Refactor)
+   ========================= */
+
+:root {
+  --primary: #b584fa;
+  --bg: #ffffff;
+  --text: #222;
+  --card: #f5f5f5;
+  --border: #e6e6e6;
+  --shadow: rgba(0,0,0,0.08);
+  --popup: #ffffff;
+  --radius: 10px;
+}
+
+.dark-mode {
+  --primary: #2a0163;
+  --bg: #121212;
+  --text: #eaeaea;
+  --card: #1e1e1e;
+  --border: #2c2c2c;
+  --shadow: rgba(0,0,0,0.35);
+  --popup: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Comic Sans", "Arial Rounded MT Bold", cursive;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.25s ease;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--primary);
+  color: white;
+  padding: 14px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+/* GRID */
+#gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.game {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+.game:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.game img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* MODAL */
+#gameModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  background: var(--bg);
+  z-index: 1000;
+}
+
+.modalTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+}
+
+.modalButtons button {
+  margin-left: 5px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#gameFrame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: black;
+}
+
+.hidden {
+  display: none !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">B+-Math</div>
+</header>
+
+<div id="gameGrid"></div>
+
+<div id="gameModal" class="hidden">
+  <div class="modalTop">
+    <span id="gameTitle"></span>
+    <div class="modalButtons">
+      <button onclick="closeGame()">Close</button>
+    </div>
+  </div>
+  <iframe id="gameFrame"></iframe>
+</div>
+
+<script>
+const games = [
+  { name: "Slope", icon: "https://via.placeholder.com/150", file: "https://slope3.com/" },
+  { name: "Run 3", icon: "https://via.placeholder.com/150", file: "https://run3.io/" }
+];
+
+const grid = document.getElementById("gameGrid");
+const modal = document.getElementById("gameModal");
+const frame = document.getElementById("gameFrame");
+const title = document.getElementById("gameTitle");
+
+function loadGames() {
+  grid.innerHTML = "";
+
+  games.forEach(g => {
+    const div = document.createElement("div");
+    div.className = "game";
+
+    div.innerHTML = `
+      <img src="${g.icon}">
+      <div>${g.name}</div>
+    `;
+
+    div.onclick = () => {
+      title.textContent = g.name;
+      frame.src = g.file;
+      modal.style.display = "flex";
+    };
+
+    grid.appendChild(div);
+  });
+}
+
+function closeGame() {
+  modal.style.display = "none";
+  frame.src = "";
+}
+
+loadGames();
+</script>
+	
 </head>
 <body class="dark-mode">
     <div id="ad-top" style="text-aliB+: center; margin: 1rem 0;">
