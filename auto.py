@@ -19,7 +19,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sharpyfta.github.io/BPlus-Math//">
+    <meta property="og:url" content="https://bplus-math.github.io/">
     <meta property="og:title" content="Play {GAME_NAME} | B+-Math Unblocked Games">
     <meta property="og:description" content="Play {GAME_NAME} unblocked on B+-Math - No downloads required! Enjoy this fun HTML5 game at school or work.">
     <meta property="og:image" content="{GAME_COVER}">
@@ -27,7 +27,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sharpyfta.github.io/BPlus-Math//">
+    <meta property="twitter:url" content="https://bplus-math.github.io/">
     <meta property="twitter:title" content="Play {GAME_NAME} | B+-Math Unblocked Games">
     <meta property="twitter:description" content="Play {GAME_NAME} unblocked on B+-Math - No downloads required! Enjoy this fun HTML5 game at school or work.">
     <meta property="twitter:image" content="{GAME_COVER}">
@@ -169,7 +169,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
     </div>
     <header>
         <div class="header-content">
-            <a class="logo" href="/index.html" style="text-decoration: none; color: inherit;">genizymath</a>
+            <a class="logo" href="/index.html" style="text-decoration: none; color: inherit;">B+ Math</a>
             <div class="control-buttons">
                 <button id="settings" style="background-color: var(--primary-color); color: white; border: none; border-radius: 4px; padding: 0.5rem 1rem; font-size: 16px; cursor: pointer;">Settings</button>
             </div>
@@ -184,7 +184,7 @@ TEMPLATE_HTML = """<!DOCTYPE html>
         <div class="game-frame-container">
             <iframe class="game-frame" id="gameFrame" allowfullscreen></iframe>
             <button class="fullscreen-btn" onclick="document.getElementById('gameFrame').requestFullscreen()">Fullscreen</button>
-            <button class="newtab-btn" onclick="window.open('https://sharpyfta.github.io/BPlus-Math//iframe/{PATHNAME}', '_blank')">Open in New Tab</button>
+            <button class="newtab-btn" onclick="window.open('https://bplus-math.github.io/iframe/{PATHNAME}', '_blank')">Open in New Tab</button>
         </div>
 
         <div id="ad-middle" style="text-aliB+: center; margin: 2rem 0;">
@@ -271,7 +271,7 @@ sitemap = """<?xml version="1.0" encoding="UTF-8"?>
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://sharpyfta.github.io/BPlus-Math//</loc>
+    <loc>https://bplus-math.github.io/</loc>
   </url>
 """;
 
@@ -318,7 +318,7 @@ async def process_game(session: ClientSession, game: dict, OUTPUT_DIR: str, GAME
     global sitemap
     sitemap += f"""
     <url>
-        <loc>https://sharpyfta.github.io/BPlus-Math//games/{game_name_url}/</loc>
+        <loc>https://bplus-math.github.io/games/{game_name_url}/</loc>
     </url>
     """
     print(f"Made {index_path}")
